@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>王钞作业03</title>
+	</head>
+	<body>
+		<canvas id="canvas1" width="250px" height="700px" style="border:1px solid #000000;"></canvas>
+		<canvas id="canvas2" width="250px" height="700px" style="border:1px solid #000000;"></canvas>
+		<canvas id="canvas3" width="250px" height="700px" style="border:1px solid #000000;"></canvas>
+	</body>
+	<script>
+		function drow1() {
+			var canvas = document.getElementById('canvas1');
+			var ctx = canvas.getContext("2d");
+			// 身体
+			ctx.beginPath();
+			ctx.moveTo(0, 150);
+			ctx.quadraticCurveTo(80, 10, 250, 50);
+			ctx.lineTo(250, 700)
+			ctx.lineTo(0, 700)
+			ctx.lineTo(0, 250)
+			ctx.lineWidth = 0;
+			ctx.strokeStyle = "rgb(255, 255, 255)"
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(253, 221, 86)'
+			ctx.fill();
+			// 衣服
+			ctx.beginPath();
+			ctx.moveTo(0, 500);
+			ctx.quadraticCurveTo(125, 550, 250, 500);
+			ctx.lineTo(250, 560)
+			ctx.quadraticCurveTo(125, 610, 0, 560);
+			ctx.lineTo(0, 500)
+			ctx.lineWidth = 0;
+			ctx.strokeStyle = "rgb(255, 255, 255)"
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(90, 88, 89)'
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.moveTo(0, 560);
+			ctx.quadraticCurveTo(125, 610, 250, 560);
+			ctx.lineTo(250, 610)
+			ctx.quadraticCurveTo(125, 660, 0, 610);
+			ctx.lineTo(0, 560)
+			ctx.lineWidth = 0;
+			ctx.strokeStyle = "rgb(255, 255, 255)"
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(228, 227, 223)'
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.moveTo(0, 610);
+			ctx.quadraticCurveTo(125, 650, 250, 610);
+			ctx.lineTo(250, 650)
+			ctx.quadraticCurveTo(125, 690, 0, 650);
+			ctx.lineTo(0, 610)
+			ctx.lineWidth = 0;
+			ctx.strokeStyle = "rgb(255, 255, 255)"
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(90, 88, 89)'
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.moveTo(0, 650);
+			ctx.quadraticCurveTo(125, 690, 250, 650);
+			ctx.lineTo(250, 680)
+			ctx.quadraticCurveTo(125, 700, 0, 680);
+			ctx.lineTo(0, 650)
+			ctx.lineWidth = 0;
+			ctx.strokeStyle = "rgb(255, 255, 255)"
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(228, 227, 223)'
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.moveTo(0, 680);
+			ctx.quadraticCurveTo(125, 700, 250, 680);
+			ctx.lineTo(250, 720)
+			ctx.quadraticCurveTo(125, 730, 0, 700);
+			ctx.lineTo(0, 680)
+			ctx.lineWidth = 0;
+			ctx.strokeStyle = "rgb(255, 255, 255)"
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(90, 88, 89)'
+			ctx.fill();
+
+			// 眼睛
+			ctx.beginPath();
+			ctx.lineWidth = 30;
+			ctx.strokeStyle = "rgb(139, 138, 134)"
+			ctx.arc(62, 220, 80, 0, 2 * Math.PI);
+			ctx.stroke();
+			ctx.beginPath();
+			ctx.lineWidth = 30;
+			ctx.strokeStyle = "rgb(139, 138, 134)"
+			ctx.arc(220, 250, 80, 0, 2 * Math.PI);
+			ctx.stroke();
+
+			ctx.beginPath();
+			ctx.lineWidth = 1;
+			ctx.strokeStyle = "rgb(255, 255, 255)"
+			ctx.arc(62, 220, 65, 0.05 * Math.PI, 1.05 * Math.PI);
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(255, 255, 255)'
+			ctx.fill();
+			ctx.beginPath();
+			ctx.lineWidth = 1;
+			ctx.strokeStyle = "rgb(255, 255, 255)"
+			ctx.arc(220, 250, 65, 0.05 * Math.PI, 1.05 * Math.PI);
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(255, 255, 255)'
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.lineWidth = 1;
+			ctx.strokeStyle = "rgb(177, 111, 61)"
+			ctx.arc(62, 220, 30, 0.05 * Math.PI, 1.05 * Math.PI);
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(177, 111, 61)'
+			ctx.fill();
+			ctx.beginPath();
+			ctx.lineWidth = 1;
+			ctx.strokeStyle = "rgb(177, 111, 61)"
+			ctx.arc(220, 250, 30, 0.05 * Math.PI, 1.05 * Math.PI);
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(177, 111, 61)'
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.lineWidth = 1;
+			ctx.strokeStyle = "rgb(42, 40, 41)"
+			ctx.arc(62, 220, 16, 0.05 * Math.PI, 1.05 * Math.PI);
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(42, 40, 41)'
+			ctx.fill();
+			ctx.beginPath();
+			ctx.lineWidth = 1;
+			ctx.strokeStyle = "rgb(42, 40, 41)"
+			ctx.arc(220, 250, 16, 0.05 * Math.PI, 1.05 * Math.PI);
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(42, 40, 41)'
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.moveTo(50, 450);
+			ctx.quadraticCurveTo(115, 430, 150, 460);
+			ctx.quadraticCurveTo(115, 440, 50, 450);
+			ctx.fillStyle = 'rgb(42, 40, 41)'
+			ctx.fill();
+
+			startX = 150
+			startY = 100
+			ctrX = 140
+			ctrY = 30
+			endX = 160
+			endY = 20
+			ctx.beginPath();
+			ctx.moveTo(startX, startY);
+			ctx.quadraticCurveTo(ctrX, ctrY, endX, endY);
+			ctx.lineWidth = 5;
+			ctx.stroke();
+
+			startX += 20
+			startY += 20
+			ctrX += 20
+			ctrY += 20
+			endX += 20
+			endY += 20
+			ctx.beginPath();
+			ctx.moveTo(startX, startY);
+			ctx.quadraticCurveTo(ctrX, ctrY, endX, endY);
+			ctx.lineWidth = 5;
+			ctx.stroke();
+
+			startX += 20
+			startY -= 20
+			ctrX += 18
+			ctrY -= 20
+			endX += 20
+			endY -= 20
+			ctx.beginPath();
+			ctx.moveTo(startX, startY);
+			ctx.quadraticCurveTo(ctrX, ctrY, endX, endY);
+			ctx.lineWidth = 5;
+			ctx.stroke();
+		}
+		drow1();
+		var flag = true
+		var centerX = 125
+		var centerY = 250
+		var ctrX2 = 140
+
+		function drow2() {
+			var canvas = document.getElementById('canvas2');
+			var ctx = canvas.getContext("2d");
+			ctx.clearRect(0, 0, canvas.width, canvas.height)
+			// 身体
+			ctx.beginPath();
+			ctx.moveTo(0, 60);
+			ctx.quadraticCurveTo(125, 10, 250, 60);
+			ctx.lineTo(250, 700)
+			ctx.lineTo(0, 700)
+			ctx.lineTo(0, 250)
+			ctx.lineWidth = 0;
+			ctx.strokeStyle = "rgb(255, 255, 255)"
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(253, 221, 86)'
+			ctx.fill();
+			// 衣服
+			ctx.beginPath();
+			ctx.moveTo(0, 490);
+			ctx.quadraticCurveTo(125, 530, 250, 490);
+			ctx.lineTo(250, 560)
+			ctx.quadraticCurveTo(125, 610, 0, 560);
+			ctx.lineTo(0, 500)
+			ctx.lineWidth = 0;
+			ctx.strokeStyle = "rgb(255, 255, 255)"
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(90, 88, 89)'
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.moveTo(0, 560);
+			ctx.quadraticCurveTo(125, 610, 250, 560);
+			ctx.lineTo(250, 610)
+			ctx.quadraticCurveTo(125, 660, 0, 610);
+			ctx.lineTo(0, 560)
+			ctx.lineWidth = 0;
+			ctx.strokeStyle = "rgb(255, 255, 255)"
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(228, 227, 223)'
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.moveTo(0, 610);
+			ctx.quadraticCurveTo(125, 650, 250, 610);
+			ctx.lineTo(250, 650)
+			ctx.quadraticCurveTo(125, 690, 0, 650);
+			ctx.lineTo(0, 610)
+			ctx.lineWidth = 0;
+			ctx.strokeStyle = "rgb(255, 255, 255)"
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(90, 88, 89)'
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.moveTo(0, 650);
+			ctx.quadraticCurveTo(125, 690, 250, 650);
+			ctx.lineTo(250, 680)
+			ctx.quadraticCurveTo(125, 700, 0, 680);
+			ctx.lineTo(0, 650)
+			ctx.lineWidth = 0;
+			ctx.strokeStyle = "rgb(255, 255, 255)"
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(228, 227, 223)'
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.moveTo(0, 680);
+			ctx.quadraticCurveTo(125, 700, 250, 680);
+			ctx.lineTo(250, 720)
+			ctx.quadraticCurveTo(125, 730, 0, 700);
+			ctx.lineTo(0, 680)
+			ctx.lineWidth = 0;
+			ctx.strokeStyle = "rgb(255, 255, 255)"
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(90, 88, 89)'
+			ctx.fill();
+
+			// 眼睛
+			ctx.beginPath();
+			ctx.moveTo(0, 250);
+			ctx.quadraticCurveTo(125, 100, 250, 250);
+			ctx.quadraticCurveTo(125, 400, 0, 250);
+			ctx.fillStyle = 'rgb(255, 255, 255)'
+			ctx.fill();
+			ctx.beginPath();
+			ctx.lineWidth = 40;
+			ctx.strokeStyle = "rgb(139, 138, 134)"
+			ctx.arc(125, 250, 110, 0, 2 * Math.PI);
+			ctx.stroke();
+
+
+			ctx.beginPath();
+			ctx.lineWidth = 1;
+			ctx.strokeStyle = "rgb(177, 111, 61)"
+			ctx.arc(centerX, centerY, 40, 0, 2 * Math.PI);
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(177, 111, 61)'
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.lineWidth = 1;
+			ctx.strokeStyle = "rgb(42, 40, 41)"
+			ctx.arc(centerX, centerY, 20, 0, 2 * Math.PI);
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(42, 40, 41)'
+			ctx.fill();
+
+
+			if (flag) {
+				centerX--
+				ctrX2+=3
+				if (centerX <= 110) {
+					flag = !flag
+				}
+			} else {
+				centerX++
+				ctrX2-=3
+				if (centerX >= 140) {
+					flag = !flag
+				}
+			}
+
+
+			ctx.beginPath();
+			ctx.moveTo(60, 450);
+			ctx.quadraticCurveTo(125, 380, 200, 450);
+			ctx.quadraticCurveTo(125, 430, 60, 450);
+			ctx.fillStyle = 'rgb(42, 40, 41)'
+			ctx.fill();
+
+			startX = 130
+			startY = 85
+			// ctrX2 = 140
+			ctrY = 15
+			endX = 120
+			endY = 5
+			ctx.beginPath();
+			ctx.moveTo(startX, startY);
+			ctx.quadraticCurveTo(ctrX2, ctrY, endX, endY);
+			ctx.lineWidth = 5;
+			ctx.stroke();
+
+			startX += 25
+			startY += 20
+			// ctrX += 25
+			ctrY += 20
+			endX += 25
+			endY += 20
+			ctx.beginPath();
+			ctx.moveTo(startX, startY);
+			ctx.quadraticCurveTo(ctrX2 + 25, ctrY, endX, endY);
+			ctx.lineWidth = 5;
+			ctx.stroke();
+			startX += 20
+			startY -= 20
+			// ctrX += 18
+			ctrY -= 20
+			endX += 20
+			endY -= 20
+			ctx.beginPath();
+			ctx.moveTo(startX, startY);
+			ctx.quadraticCurveTo(ctrX2 + 43, ctrY, endX, endY);
+			ctx.lineWidth = 5;
+			ctx.stroke();
+		}
+		// window.setTimeout(drow2,10)
+		setInterval(function() {
+			drow2()
+		}, 5)
+
+		function drow3() {
+			var canvas = document.getElementById('canvas3');
+			var ctx = canvas.getContext("2d");
+			// 身体
+			ctx.beginPath();
+			ctx.moveTo(0, 100);
+			ctx.quadraticCurveTo(125, 20, 250, 70);
+			ctx.lineTo(250, 700)
+			ctx.lineTo(0, 700)
+			ctx.lineTo(0, 250)
+			ctx.lineWidth = 0;
+			ctx.strokeStyle = "rgb(255, 255, 255)"
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(253, 221, 86)'
+			ctx.fill();
+			// 衣服
+			ctx.beginPath();
+			ctx.moveTo(0, 460);
+			ctx.quadraticCurveTo(125, 500, 250, 460);
+			ctx.lineTo(250, 530)
+			ctx.quadraticCurveTo(125, 560, 0, 530);
+			ctx.lineTo(0, 460)
+			ctx.lineWidth = 0;
+			ctx.strokeStyle = "rgb(255, 255, 255)"
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(90, 88, 89)'
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.moveTo(0, 530);
+			ctx.quadraticCurveTo(125, 560, 250, 530);
+			ctx.lineTo(250, 600)
+			ctx.quadraticCurveTo(125, 620, 0, 600);
+			ctx.lineTo(0, 530)
+			ctx.lineWidth = 0;
+			ctx.strokeStyle = "rgb(255, 255, 255)"
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(228, 227, 223)'
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.moveTo(0, 600);
+			ctx.quadraticCurveTo(125, 620, 250, 600);
+			ctx.lineTo(250, 660)
+			ctx.quadraticCurveTo(125, 670, 0, 660);
+			ctx.lineTo(0, 600)
+			ctx.lineWidth = 0;
+			ctx.strokeStyle = "rgb(255, 255, 255)"
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(90, 88, 89)'
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.moveTo(0, 660);
+			ctx.quadraticCurveTo(125, 670, 250, 660);
+			ctx.lineTo(250, 700)
+			ctx.lineTo(0, 700)
+			ctx.lineTo(0, 660)
+			ctx.lineWidth = 0;
+			ctx.strokeStyle = "rgb(255, 255, 255)"
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(228, 227, 223)'
+			ctx.fill();
+
+
+			// 眼睛
+			ctx.beginPath();
+			ctx.moveTo(-50, 220);
+			ctx.quadraticCurveTo(62.5, 100, 160, 220);
+			ctx.quadraticCurveTo(62.5, 230, -50, 220);
+			ctx.fillStyle = 'rgb(255, 255, 255)'
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.moveTo(160, 220);
+			ctx.quadraticCurveTo(200, 120, 350, 220);
+			ctx.quadraticCurveTo(200, 230, 160, 220);
+			ctx.fillStyle = 'rgb(255, 255, 255)'
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.lineWidth = 30;
+			ctx.strokeStyle = "rgb(139, 138, 134)"
+			ctx.arc(62, 220, 92, 0, 2 * Math.PI);
+			ctx.stroke();
+			ctx.beginPath();
+			ctx.lineWidth = 30;
+			ctx.strokeStyle = "rgb(139, 138, 134)"
+			ctx.arc(250, 220, 92, 0, 2 * Math.PI);
+			ctx.stroke();
+
+
+			ctx.beginPath();
+			ctx.lineWidth = 1;
+			ctx.strokeStyle = "rgb(177, 111, 61)"
+			ctx.arc(15, 200, 16, 0, 2 * Math.PI);
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(177, 111, 61)'
+			ctx.fill();
+			ctx.beginPath();
+			ctx.lineWidth = 1;
+			ctx.strokeStyle = "rgb(177, 111, 61)"
+			ctx.arc(200, 200, 16, 0, 2 * Math.PI);
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(177, 111, 61)'
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.lineWidth = 1;
+			ctx.strokeStyle = "rgb(42, 40, 41)"
+			ctx.arc(15, 200, 8, 0, 2 * Math.PI);
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(42, 40, 41)'
+			ctx.fill();
+			ctx.beginPath();
+			ctx.lineWidth = 1;
+			ctx.strokeStyle = "rgb(42, 40, 41)"
+			ctx.arc(200, 200, 8, 0, 2 * Math.PI);
+			ctx.stroke();
+			ctx.fillStyle = 'rgb(42, 40, 41)'
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.moveTo(120, 440);
+			ctx.quadraticCurveTo(220, 440, 250, 400);
+			ctx.quadraticCurveTo(230, 490, 120, 440);
+			ctx.fillStyle = 'rgb(42, 40, 41)'
+			ctx.fill();
+
+			startX = 150
+			startY = 100
+			ctrX = 140
+			ctrY = 30
+			endX = 160
+			endY = 20
+			ctx.beginPath();
+			ctx.moveTo(startX, startY);
+			ctx.quadraticCurveTo(ctrX, ctrY, endX, endY);
+			ctx.lineWidth = 5;
+			ctx.stroke();
+
+			startX += 20
+			startY += 20
+			ctrX += 20
+			ctrY += 20
+			endX += 20
+			endY += 20
+			ctx.beginPath();
+			ctx.moveTo(startX, startY);
+			ctx.quadraticCurveTo(ctrX, ctrY, endX, endY);
+			ctx.lineWidth = 5;
+			ctx.stroke();
+
+			startX += 20
+			startY -= 20
+			ctrX += 18
+			ctrY -= 20
+			endX += 20
+			endY -= 20
+			ctx.beginPath();
+			ctx.moveTo(startX, startY);
+			ctx.quadraticCurveTo(ctrX, ctrY, endX, endY);
+			ctx.lineWidth = 5;
+			ctx.stroke();
+		}
+		drow3();
+	</script>
+</html>

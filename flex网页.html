@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				border: 0;
+			}
+
+			.main {
+				width: 1280px;
+				height: 832px;
+				background-color: #EEEEEE;
+			}
+
+			.top {
+				width: 100%;
+				height: 95px;
+				background-color: #FFFFFF;
+				display: flex;
+				justify-content: space-around;
+			}
+
+			.logo {
+				width: 166px;
+				height: 95px;
+				background-color: #409EFF;
+				display: flex;
+				flex: 1;
+				text-align: center;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.logo h1 {
+				color: #FFFFFF;
+			}
+
+			.left {
+				width: 166px;
+				height: 737px;
+				background-color: #383838;
+				flex: 1;
+			}
+
+			.top-right {
+				display: flex;
+				flex: 6.7;
+				justify-content: right;
+				align-items: center;
+			}
+
+			.top-user {
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				margin: 0 20px;
+			}
+
+			.top-user h2 {
+				margin: 0 10px 0 20px;
+			}
+
+			.top-out {
+				width: 100px;
+				height: 100px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-left: #ECECEC solid;
+			}
+
+			.left-home {
+				padding: 20px 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.left-home :nth-child(2) {
+				margin: 0 10px;
+				color: #B4B4B4;
+			}
+			.main-content{
+				display: flex;
+			}
+			.content{
+				flex: 6.7;
+				display: flex;
+			}
+			
+			.content-all{
+				display: flex;
+				flex-direction: column;
+			}
+			.part_1{
+				margin: 20px;
+				width: 405px;
+				height: 322px;
+				background-color: #FFFFFF;
+			}
+			.part_1 .content-top{
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+			}
+			.part_1 .content-top div{
+				width: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.part_1 .content-top div:first-child{
+				display: flex;
+				justify-content: left;
+				flex: 1;
+				padding-left: 10px;
+			}
+			.part_1 .content-top div:last-child{
+				display: flex;
+				flex: 0.8;
+				padding-right: 20px;
+				justify-content: right;
+			}
+			.part_1 .content-main{
+				width: 405px;
+				height: 244px;
+				background-color: #FFFFFF;
+				margin: 20px 0;
+				font-size: 15px;
+			}
+			.part_1 .content-main td:first-child{
+				width: 56px;
+				height: 48px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: #FFFFFF;
+			}
+			.part_1 .content-main td{
+				width: 116px;
+				height: 48px;
+				background-color: #FFFFFF;
+			}
+			
+			
+			
+			
+			.part_2{
+				margin: 20px;
+				width: 630px;
+				height: 322px;
+				background-color: #FFFFFF;
+			}
+			.part_2 .content-top{
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+			}
+			.part_2 .content-top div{
+				width: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.part_2 .content-top div:first-child{
+				display: flex;
+				justify-content: left;
+				padding-left: 10px;
+			}
+			.part_2 .content-top div:last-child{
+				display: flex;
+				padding-right: 20px;
+				justify-content: right;
+			}
+			.part_2 .content-main{
+				width: 630px;
+				height: 244px;
+				background-color: #FFFFFF;
+				margin: 20px 0;
+				font-size: 15px;
+			}
+			.part_2 .content-main td{
+				width: 130px;
+				height: 48px;
+				background-color: #FFFFFF;
+			}
+			.part_2 .content-main td:first-child{
+				padding-left:10px ;
+			}
+			
+			
+			.part_4{
+				margin: 20px;
+				width: 405px;
+				height: 36px;
+				background-color: #FFFFFF;
+			}
+			.part_4 .content-top{
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+			}
+			.part_4 .content-top div{
+				width: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.part_4 .content-top div:first-child{
+				display: flex;
+				justify-content: left;
+				flex: 1;
+				padding-left: 10px;
+			}
+			.part_4 .content-top div:last-child{
+				display: flex;
+				flex: 0.8;
+				padding-right: 20px;
+				justify-content: right;
+			}
+			.part_4 .content-main{
+				width: 405px;
+				height: 244px;
+				background-color: #FFFFFF;
+				margin: 20px 0;
+				font-size: 15px;
+			}
+			
+			.content_btn{
+				width: 124px;
+				height: 36px;
+				background-color: #409EFF;
+				color: #FFFFFF;
+				border-radius: 15px;
+				text-align: center;
+				line-height: 36px;
+				margin: 10px;
+			}
+			.content-main-btn{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="top">
+				<div class="logo">
+					<h1>flex网页</h1>
+				</div>
+				<div class="top-right">
+					<div class="top-user">
+						<img src="./img/image 1.png" alt="" width="48px" height="48px">
+						<h2>系分院负责人</h2>
+						<img src="./img/下拉.png" alt="" width="36px" height="36px">
+					</div>
+					<div class="top-out"><img src="./img/关机.png" alt="" width="36px" height="36px"></div>
+				</div>
+			</div>
+			<div class="main-content">
+				<div class="left">
+					<div class="left-home">
+						<img src="./img/home.png" alt="" width="24px" height="24px">
+						<h3>首页</h3>
+						<img src="./img/chevron-right.png" alt="" width="32px" height="32px">
+					</div>
+				</div>
+				<div class="content-all">
+					<div class="content">
+						<!-- 关注专业 -->
+						<div class="part_1">
+							<div class="content-top">
+								<div>
+									<img src="./img/Dot.png" width="10px" height="10px" alt="">
+									<h2 style="color: #606266; font-weight: 500; margin: 0 10px;">关注专业</h2>
+								</div>
+								<div>
+									<h3 style="color: #409EFF; font-weight: 400;">门类</h3>
+									<img src="./img/Icon.png" width="18px" height="18px" alt="">
+								</div>
+							</div>
+							<div class="content-main">
+								<table>
+									<tr>
+										<td><input type="checkbox" name="" value=""></td>
+										<td>专业名称<img src="./img/short-table.png" alt=""></td>
+										<td>门类<img src="./img/short-table.png" alt=""></td>
+										<td>专业名称<img src="./img/short-table.png" alt=""></td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" name="" value=""></td>
+										<td>软件工程</td>
+										<td>工学</td>
+										<td>计算机类</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" name="" value=""></td>
+										<td>软件工程</td>
+										<td>工学</td>
+										<td>计算机类</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" name="" value=""></td>
+										<td>软件工程</td>
+										<td>工学</td>
+										<td>计算机类</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" name="" value=""></td>
+										<td>软件工程</td>
+										<td>工学</td>
+										<td>计算机类</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<!-- 产业数据统计 -->
+						<div class="part_2">
+							<div class="content-top">
+								<div>
+									<img src="./img/Dot.png" width="10px" height="10px" alt="">
+									<h2 style="color: #606266; font-weight: 500; margin: 0 10px;">关注专业</h2>
+								</div>
+								<div>
+									<h3 style="color: #409EFF; font-weight: 400;">学校所在地</h3>
+									<img src="./img/Icon.png" width="18px" height="18px" alt="">
+								</div>
+							</div>
+							<div class="content-main">
+								<table>
+									<tr>
+										<td>专业名称<img src="./img/short-table.png" alt=""></td>
+										<td>企业<img src="./img/short-table.png" alt=""></td>
+										<td>岗位<img src="./img/short-table.png" alt=""></td>
+										<td>技能<img src="./img/short-table.png" alt=""></td>
+										<td>任务<img src="./img/short-table.png" alt=""></td>
+										<td>最高薪资<img src="./img/short-table.png" alt=""></td>
+										<td>最低薪资<img src="./img/short-table.png" alt=""></td>
+									</tr>
+									<tr>
+										<td>软件工程</td>
+										<td>300</td>
+										<td>5000</td>
+										<td>400</td>
+										<td>4500</td>
+										<td>2k</td>
+										<td>12k</td>
+									</tr>
+									<tr>
+										<td>软件工程</td>
+										<td>300</td>
+										<td>5000</td>
+										<td>400</td>
+										<td>4500</td>
+										<td>2k</td>
+										<td>12k</td>
+									</tr>
+									<tr>
+										<td>软件工程</td>
+										<td>300</td>
+										<td>5000</td>
+										<td>400</td>
+										<td>4500</td>
+										<td>2k</td>
+										<td>12k</td>
+									</tr>
+									<tr>
+										<td>软件工程</td>
+										<td>300</td>
+										<td>5000</td>
+										<td>400</td>
+										<td>4500</td>
+										<td>2k</td>
+										<td>12k</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="content">
+						<!-- 本校专业现状 -->
+						<div class="part_2">
+							<div class="content-top">
+								<div>
+									<img src="./img/Dot.png" width="10px" height="10px" alt="">
+									<h2 style="color: #606266; font-weight: 500; margin: 0 10px;">本校专业现状</h2>
+								</div>
+								<div>
+									<h3 style="color: #409EFF; font-weight: 400;">门类</h3>
+									<img src="./img/Icon.png" width="18px" height="18px" alt="">
+								</div>
+							</div>
+							<div class="content-main">
+								<table>
+									<tr>
+										<td>专业名称<img src="./img/short-table.png" alt=""></td>
+										<td>企业<img src="./img/short-table.png" alt=""></td>
+										<td>岗位<img src="./img/short-table.png" alt=""></td>
+										<td>技能<img src="./img/short-table.png" alt=""></td>
+										<td>任务<img src="./img/short-table.png" alt=""></td>
+										<td>最高薪资<img src="./img/short-table.png" alt=""></td>
+										<td>最低薪资<img src="./img/short-table.png" alt=""></td>
+									</tr>
+									<tr>
+										<td>软件工程</td>
+										<td>300</td>
+										<td>5000</td>
+										<td>400</td>
+										<td>4500</td>
+										<td>2k</td>
+										<td>12k</td>
+									</tr>
+									<tr>
+										<td>软件工程</td>
+										<td>300</td>
+										<td>5000</td>
+										<td>400</td>
+										<td>4500</td>
+										<td>2k</td>
+										<td>12k</td>
+									</tr>
+									<tr>
+										<td>软件工程</td>
+										<td>300</td>
+										<td>5000</td>
+										<td>400</td>
+										<td>4500</td>
+										<td>2k</td>
+										<td>12k</td>
+									</tr>
+									<tr>
+										<td>软件工程</td>
+										<td>300</td>
+										<td>5000</td>
+										<td>400</td>
+										<td>4500</td>
+										<td>2k</td>
+										<td>12k</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="part_4">
+							<div class="content-top">
+								<div>
+									<img src="./img/Dot.png" width="10px" height="10px" alt="">
+									<h2 style="color: #606266; font-weight: 500; margin: 0 10px;">未开设专业信息</h2>
+								</div>
+								<div>
+									<h3 style="color: #409EFF; font-weight: 400;">门类</h3>
+									<img src="./img/Icon.png" width="18px" height="18px" alt="">
+								</div>
+							</div>
+							<div class="content-main-btn">
+								<div class="content_btn">
+									数字媒体专业
+								</div>
+								<div class="content_btn">
+									数字媒体专业
+								</div>
+								<div class="content_btn">
+									数字媒体专业
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</body>
+</html>

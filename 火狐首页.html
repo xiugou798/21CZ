@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			html,
+			body {
+				margin: 0 auto;
+				padding: 0;
+				border: 0;
+				background: rgb(240, 240, 240);
+			}
+
+			a {
+				text-decoration: none;
+				color: #000000;
+			}
+
+			ul li {
+				list-style: none;
+
+			}
+
+			#app {
+				width: 100%;
+				min-width: 1140px;
+				height: 1000px;
+				margin: auto;
+				background-image: url("./img/bg.jpeg");
+				background-position: top;
+				background-repeat: no-repeat;
+			}
+
+			.top {
+				width: 100%;
+				top: 0;
+				margin: auto;
+				height: 150px;
+				background-color: #FFFFFF;
+				position: fixed;
+			}
+
+			.red-point::after {
+				color: red;
+				content: "●";
+				font-size: 20px;
+				position: absolute;
+				right: -11px;
+				top: -13px;
+			}
+
+			.flex {
+				display: flex;
+			}
+
+			.align-items-center {
+				align-items: center;
+			}
+
+			.center {
+				justify-content: center;
+			}
+
+			.right {
+				justify-content: flex-end;
+			}
+
+			.relative {
+				position: relative;
+			}
+
+			.absolute {
+				position: absolute;
+			}
+
+			.space-between {
+				justify-content: space-between;
+			}
+
+			.space-evenly {
+				justify-content: space-evenly;
+			}
+
+			.text {
+				font-size: 15px;
+				color: #272727;
+				position: relative;
+			}
+
+			.margin-10px {
+				margin: 10px;
+			}
+
+			.top-1 {
+				margin-top: 12px;
+				width: 1140px;
+				margin-left: auto;
+				margin-right: auto;
+				height: 44px;
+				transition: all 0.6s ease
+			}
+
+			.display-block {
+				display: block;
+			}
+
+			.display-none {
+				display: none;
+			}
+
+			.top-2 {
+				margin-bottom: 12px;
+				width: 1140px;
+				margin-left: auto;
+				margin-right: auto;
+				height: 82px;
+			}
+
+			.logo {
+				width: 146px;
+				height: 44px;
+				background: url("./img/logo.png") 0 no-repeat;
+				padding-left: 50px;
+			}
+
+			.logo-min {
+				width: 87px;
+				height: 20px;
+				background: url("./img/logo-min.png") 0 no-repeat;
+				padding-left: 17px;
+				color: #949494;
+				font-size: 14px;
+				line-height: 20px;
+			}
+
+			.icon {
+				width: 20px;
+				height: 20px;
+				border-radius: 10%;
+				margin: 0 10px;
+			}
+
+			.baidu-logo {
+				width: 140px;
+				height: 50px;
+				background: url("./img/baidu.png") 0 no-repeat;
+				margin-left: 50px;
+
+			}
+
+			.padding-16px {
+				padding: 16px 0;
+			}
+
+			.news {
+				width: 200px;
+				height: 20px;
+				text-align: center;
+			}
+
+			.form {
+				width: 626px;
+				height: 50px;
+			}
+
+			.form .input {
+				border-radius: 5px 0 0 5px;
+				border: 2px solid #0060df;
+				height: 46px;
+				line-height: 46px;
+				width: 500px;
+				outline-color: #0060df;
+			}
+
+
+			.form .btn {
+				border-radius: 0 5px 5px 0;
+				color: #fff;
+				border: 2px solid #0060df;
+				font-size: 16px;
+				height: 52px;
+				line-height: 50px;
+				padding: 0 25px;
+				background-color: #0060df;
+			}
+
+			.main {
+				width: 100%;
+				height: 8569px;
+				padding-top: 162px;
+			}
+
+			.main-top {
+				width: 1140px;
+				margin: auto;
+				height: 270px;
+				background-color: #FFFFFF;
+				border-radius: 5px 5px 0 0;
+			}
+
+			.container {
+				width: 1100px;
+				height: 100px;
+				padding: 6px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				font-weight: 500;
+				margin: auto;
+				display: grid;
+				grid-template-rows: 1fr 1fr;
+				grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+			}
+
+
+
+			.line {
+				width: 90%;
+				margin: auto;
+				height: 0;
+				border-top: 1px dashed #000000;
+				opacity: 0.1;
+			}
+
+			.detailed {
+				margin: auto;
+				width: 1140px;
+				height: 8121px;
+				background-color: #FFFFFF;
+				display: flex;
+				justify-content: space-around;
+			}
+
+			.main-left {
+				width: 840px;
+				height: 8121px;
+				margin: 0 15px;
+			}
+
+
+
+			.main-left-top {
+				width: 800px;
+				height: 50px;
+			}
+
+			.main-left-top ul {
+				margin: 0;
+			}
+
+			.main-left-top ul li {
+				line-height: 50px;
+			}
+
+			.main-left-main {
+				width: 800px;
+				height: 700px;
+			}
+
+			.title-text {
+				font-size: 18px;
+				font-weight: 500;
+				color: #0060df;
+			}
+
+			.title-text-normal {
+				font-size: 18px;
+				font-weight: 500;
+				color: #000000;
+			}
+
+			.column {
+				flex-direction: column;
+			}
+
+			.border-bottom {
+				border-bottom: 2px solid #0060df;
+			}
+
+			.main-left-left-bottom a img {
+				width: 176px;
+				height: 100px;
+			}
+
+			.main-left-left-bottom {
+				text-align: center;
+				width: 360px;
+				display: grid;
+				grid-template-rows: 1fr 1fr;
+				grid-template-columns: 1fr 1fr;
+			}
+
+			.main-left-left {
+				margin-top: 60px;
+				text-align: center;
+			}
+
+			.main-left-left>a>img {
+				width: 360px;
+				height: 230px;
+			}
+
+			.main-left-right {
+				width: 439px;
+				height: 642px;
+			}
+
+			.main-left-right- {
+				width: 439px;
+				height: 321px;
+			}
+
+			.main-left-right- ul li {
+				margin: 5px 0;
+			}
+
+			.main-left-right- ul li a {
+				margin: 0 0 0 5px;
+			}
+
+			.main-left-right- ul li::marker {
+				content: "●";
+				right: 5px;
+			}
+
+
+			.main-right {
+				width: 300px;
+				height: 490px;
+				background-color: #FFFFFF;
+			}
+
+			.main-right- {
+				width: 300px;
+				height: 490px;
+				top: 93px;
+				right: 193px;
+				position: inherit;
+				background-color: #FFFFFF;
+			}
+
+			.main-right-head {
+				width: 86px;
+				height: 50px;
+				margin: 10px;
+			}
+
+			.main-right-main a {
+				width: 224px;
+				height: 26px;
+			}
+
+			.main-right-main a span {
+				padding: 0 6px;
+				margin: 0 10px;
+				background-color: #cbcbcb;
+				border-radius: 2px;
+			}
+
+			.advertisement-head {
+				width: 86px;
+				height: 50px;
+				margin: 10px;
+			}
+
+			.advertisement-main {
+				display: grid;
+				grid-template-rows: 1fr 1fr;
+				grid-template-columns: 1fr 1fr 1fr 1fr;
+			}
+
+			.advertisement-main a {
+				width: 125px;
+				height: 150px;
+				text-align: center;
+			}
+
+			.advertisement-main a img {
+				width: 125px;
+				height: 100px;
+				border-radius: 2px;
+			}
+
+			.advertisement {
+				width: 800px;
+				height: 400px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<div class="top">
+				<div class="top-1">
+					<div class="flex space-between">
+						<div class="flex align-items-center">
+							<a class="logo"
+								href="https://static.firefoxchina.cn/202204/Rpw0Dz7BhwO4gyh28jduu7MqX6JrKKx4r7vkjAKZ.png"></a>
+							<a class="logo-min"
+								href="https://static.firefoxchina.cn/202205/Ra7Pm0luls9w24SwwbxA7HgNjRJoplELatCY7er9.png">火狐浏览器</a>
+						</div>
+						<div class="flex space-evenly center align-items-center">
+							<a class="text margin-10px red-point" href="">背景</a>
+							<a class="text margin-10px red-point" href="">设置</a>
+							<a class="text margin-10px" href="">访问记录</a>
+							<a class="text margin-10px" href="">举报</a>
+							<a class="text margin-10px" href="">联系</a>
+							<a class="text margin-10px" href="">反馈</a>
+						</div>
+						<div class="right flex align-items-center">
+							<div class="flex relative margin-10px">
+								<a href="">北京天气</a>
+								<svg t="1666196282802" class="icon align-items-center" viewBox="0 0 1024 1024"
+									version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6301" width="200"
+									height="200">
+									<path d="M1.264376 1.257151h1021.478473v1021.492923H1.264376z" fill="#e6e6e6"
+										p-id="6302" data-spm-anchor-id="a313x.7781069.0.i11" class=""></path>
+									<path
+										d="M1.264376 1.257151l1021.471248 1021.485698M1.264376 1022.742849L1022.735624 1.257151"
+										fill="#e6e6e6" p-id="6303"></path>
+									<path
+										d="M511.414775 761.898483a65.039498 65.039498 0 0 1-46.420659-19.485839l-365.346843-372.449023a65.025048 65.025048 0 1 1 92.841318-91.071192l318.926184 325.125238 318.933408-325.125238c25.143018-25.619869 66.311099-26.046144 91.959868-0.888675 25.634319 25.157468 26.031694 66.325549 0.88145 91.959867L557.842659 742.405419a65.046723 65.046723 0 0 1-46.427884 19.493064z"
+										fill="#515151" p-id="6304" data-spm-anchor-id="a313x.7781069.0.i10" class="">
+									</path>
+								</svg>
+							</div>
+							<div class="relative flex margin-10px">
+								<a href="">星座运势</a>
+								<svg t="1666196282802" class="icon align-items-center" viewBox="0 0 1024 1024"
+									version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6301" width="200"
+									height="200">
+									<path d="M1.264376 1.257151h1021.478473v1021.492923H1.264376z" fill="#e6e6e6"
+										p-id="6302" data-spm-anchor-id="a313x.7781069.0.i11" class=""></path>
+									<path
+										d="M1.264376 1.257151l1021.471248 1021.485698M1.264376 1022.742849L1022.735624 1.257151"
+										fill="#e6e6e6" p-id="6303"></path>
+									<path
+										d="M511.414775 761.898483a65.039498 65.039498 0 0 1-46.420659-19.485839l-365.346843-372.449023a65.025048 65.025048 0 1 1 92.841318-91.071192l318.926184 325.125238 318.933408-325.125238c25.143018-25.619869 66.311099-26.046144 91.959868-0.888675 25.634319 25.157468 26.031694 66.325549 0.88145 91.959867L557.842659 742.405419a65.046723 65.046723 0 0 1-46.427884 19.493064z"
+										fill="#515151" p-id="6304" data-spm-anchor-id="a313x.7781069.0.i10" class="">
+									</path>
+								</svg>
+							</div>
+							<div class="relative flex margin-10px">
+								<a href="">邮箱登录</a>
+								<svg t="1666196282802" class="icon align-items-center" viewBox="0 0 1024 1024"
+									version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6301" width="200"
+									height="200">
+									<path d="M1.264376 1.257151h1021.478473v1021.492923H1.264376z" fill="#e6e6e6"
+										p-id="6302" data-spm-anchor-id="a313x.7781069.0.i11" class=""></path>
+									<path
+										d="M1.264376 1.257151l1021.471248 1021.485698M1.264376 1022.742849L1022.735624 1.257151"
+										fill="#e6e6e6" p-id="6303"></path>
+									<path
+										d="M511.414775 761.898483a65.039498 65.039498 0 0 1-46.420659-19.485839l-365.346843-372.449023a65.025048 65.025048 0 1 1 92.841318-91.071192l318.926184 325.125238 318.933408-325.125238c25.143018-25.619869 66.311099-26.046144 91.959868-0.888675 25.634319 25.157468 26.031694 66.325549 0.88145 91.959867L557.842659 742.405419a65.046723 65.046723 0 0 1-46.427884 19.493064z"
+										fill="#515151" p-id="6304" data-spm-anchor-id="a313x.7781069.0.i10" class="">
+									</path>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="top-2">
+					<div class="flex align-items-center padding-16px right">
+						<div class="search flex align-items-center">
+							<a class="baidu-logo" href=""></a>
+							<span><svg t="1666196767982" class="icon" viewBox="0 0 1024 1024" version="1.1"
+									xmlns="http://www.w3.org/2000/svg" p-id="7475" width="200" height="200">
+									<path
+										d="M699.733 776.533C644.267 810.667 580.267 832 516.267 832 328.533 832 179.2 686.933 179.2 503.467c0-46.934 8.533-89.6 29.867-132.267l4.266 29.867c4.267 17.066 25.6 25.6 42.667 21.333 17.067-4.267 25.6-25.6 21.333-42.667l-38.4-115.2c-4.266-17.066-25.6-25.6-42.666-21.333L76.8 285.867c-17.067 4.266-25.6 25.6-21.333 42.666 4.266 17.067 25.6 25.6 42.666 21.334l46.934-12.8C119.467 392.533 102.4 448 102.4 512c0 221.867 183.467 401.067 409.6 401.067 81.067 0 157.867-21.334 226.133-64 17.067-12.8 21.334-34.134 12.8-51.2-12.8-25.6-34.133-34.134-51.2-21.334z m256-81.066c-8.533-17.067-25.6-25.6-42.666-17.067l-38.4 17.067c34.133-59.734 51.2-123.734 51.2-192 0-221.867-183.467-401.067-409.6-401.067-85.334 0-162.134 25.6-230.4 68.267-17.067 12.8-21.334 34.133-12.8 51.2 12.8 17.066 34.133 21.333 51.2 8.533 55.466-34.133 119.466-55.467 187.733-55.467 187.733 0 337.067 145.067 337.067 328.534 0 55.466-12.8 106.666-38.4 153.6 0 0 0 4.266-4.267 4.266L793.6 627.2c-8.533-17.067-25.6-25.6-42.667-17.067-17.066 8.534-25.6 25.6-17.066 42.667L780.8 768c8.533 17.067 25.6 25.6 42.667 17.067l115.2-46.934c17.066-8.533 25.6-25.6 17.066-42.666z"
+										p-id="7476" data-spm-anchor-id="a313x.7781069.0.i20" class="selected"
+										fill="#e6e6e6"></path>
+								</svg></span>
+							<form class="form flex" action="">
+								<input class="input" type="text">
+								<input class="btn" type="submit" value="搜索">
+							</form>
+						</div>
+						<div class="news">
+							（1.09）
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main">
+				<div class="main-top">
+					<ul class="container">
+						<li class="align-items-center flex center"><img src="./img/icon-baidu.png" alt="">百度</li>
+						<li class="align-items-center flex center">新浪微博</li>
+						<li class="align-items-center flex center">优酷</li>
+						<li class="align-items-center flex center">腾讯</li>
+						<li class="align-items-center flex center">网易</li>
+						<li class="align-items-center flex center">凤凰网</li>
+						<li class="align-items-center flex center">搜狐</li>
+						<li class="align-items-center flex center"><img src="./img/icon-douyin.png" alt="">抖音短视频</li>
+						<li class="align-items-center flex center"><img src="./img/icon-zhihu.png" alt="">知乎</li>
+						<li class="align-items-center flex center">爱奇艺</li>
+						<li class="align-items-center flex center">腾讯视频</li>
+						<li class="align-items-center flex center">太平洋汽车</li>
+						<li class="align-items-center flex center">哔哩哔哩</li>
+						<li class="align-items-center flex center">58同城</li>
+					</ul>
+					<div class="line"></div>
+					<ul class="container">
+						<li class="align-items-center flex center">携程热门路线</li>
+						<li class="align-items-center flex center">爱淘宝</li>
+						<li class="align-items-center flex center">阿里1688</li>
+						<li class="align-items-center flex center">京东商城</li>
+						<li class="align-items-center flex center">京东图书</li>
+						<li class="align-items-center flex center">4399</li>
+						<li class="align-items-center flex center">淘宝网</li>
+						<li class="align-items-center flex center">Apple(中国)</li>
+						<li class="align-items-center flex center">唯品会</li>
+						<li class="align-items-center flex center">京东超市数码</li>
+						<li class="align-items-center flex center">亚马逊</li>
+						<li class="align-items-center flex center">天猫超市</li>
+						<li class="align-items-center flex center">微软官方超市</li>
+						<li class="align-items-center flex center">拼多多</li>
+					</ul>
+					<div class="line"></div>
+					<div class="flex align-items-center space-evenly">
+						<a class="flex align-items-center center margin-10px" href=""><svg t="1666204967235"
+								class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+								p-id="8605" data-spm-anchor-id="a313x.7781069.0.i25" width="200" height="200">
+								<path
+									d="M192 438.4c12.8 0 24-11.2 24-24V256c0-22.4 17.6-40 40-40h158.4c12.8 0 24-11.2 24-24s-11.2-24-24-24H256c-48 0-88 40-88 88v158.4c0 12.8 11.2 24 24 24zM768 168h-158.4c-12.8 0-24 11.2-24 24s11.2 24 24 24H768c22.4 0 40 17.6 40 40v158.4c0 12.8 11.2 24 24 24s24-11.2 24-24V256c0-48-40-88-88-88zM832 585.6c-12.8 0-24 11.2-24 24V768c0 22.4-17.6 40-40 40h-158.4c-12.8 0-24 11.2-24 24s11.2 24 24 24H768c48 0 88-40 88-88v-158.4c0-12.8-11.2-24-24-24zM414.4 808H256c-22.4 0-40-17.6-40-40v-158.4c0-12.8-11.2-24-24-24s-24 11.2-24 24V768c0 48 40 88 88 88h158.4c12.8 0 24-11.2 24-24s-11.2-24-24-24zM832 488H192c-12.8 0-24 11.2-24 24s11.2 24 24 24h640c12.8 0 24-11.2 24-24s-11.2-24-24-24z"
+									p-id="8606" data-spm-anchor-id="a313x.7781069.0.i26" class="selected"
+									fill="#cdcdcd"></path>
+							</svg>秋季护肤三件5折</a>
+						<a class="flex align-items-center center" href=""><svg t="1666204967235" class="icon"
+								viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8605"
+								data-spm-anchor-id="a313x.7781069.0.i25" width="200" height="200">
+								<path
+									d="M192 438.4c12.8 0 24-11.2 24-24V256c0-22.4 17.6-40 40-40h158.4c12.8 0 24-11.2 24-24s-11.2-24-24-24H256c-48 0-88 40-88 88v158.4c0 12.8 11.2 24 24 24zM768 168h-158.4c-12.8 0-24 11.2-24 24s11.2 24 24 24H768c22.4 0 40 17.6 40 40v158.4c0 12.8 11.2 24 24 24s24-11.2 24-24V256c0-48-40-88-88-88zM832 585.6c-12.8 0-24 11.2-24 24V768c0 22.4-17.6 40-40 40h-158.4c-12.8 0-24 11.2-24 24s11.2 24 24 24H768c48 0 88-40 88-88v-158.4c0-12.8-11.2-24-24-24zM414.4 808H256c-22.4 0-40-17.6-40-40v-158.4c0-12.8-11.2-24-24-24s-24 11.2-24 24V768c0 48 40 88 88 88h158.4c12.8 0 24-11.2 24-24s-11.2-24-24-24zM832 488H192c-12.8 0-24 11.2-24 24s11.2 24 24 24h640c12.8 0 24-11.2 24-24s-11.2-24-24-24z"
+									p-id="8606" data-spm-anchor-id="a313x.7781069.0.i26" class="selected"
+									fill="#cdcdcd"></path>
+							</svg>淘宝/天猫特卖精选</a>
+						<a class="flex align-items-center center" href=""><svg t="1666204967235" class="icon"
+								viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8605"
+								data-spm-anchor-id="a313x.7781069.0.i25" width="200" height="200">
+								<path
+									d="M192 438.4c12.8 0 24-11.2 24-24V256c0-22.4 17.6-40 40-40h158.4c12.8 0 24-11.2 24-24s-11.2-24-24-24H256c-48 0-88 40-88 88v158.4c0 12.8 11.2 24 24 24zM768 168h-158.4c-12.8 0-24 11.2-24 24s11.2 24 24 24H768c22.4 0 40 17.6 40 40v158.4c0 12.8 11.2 24 24 24s24-11.2 24-24V256c0-48-40-88-88-88zM832 585.6c-12.8 0-24 11.2-24 24V768c0 22.4-17.6 40-40 40h-158.4c-12.8 0-24 11.2-24 24s11.2 24 24 24H768c48 0 88-40 88-88v-158.4c0-12.8-11.2-24-24-24zM414.4 808H256c-22.4 0-40-17.6-40-40v-158.4c0-12.8-11.2-24-24-24s-24 11.2-24 24V768c0 48 40 88 88 88h158.4c12.8 0 24-11.2 24-24s-11.2-24-24-24zM832 488H192c-12.8 0-24 11.2-24 24s11.2 24 24 24h640c12.8 0 24-11.2 24-24s-11.2-24-24-24z"
+									p-id="8606" data-spm-anchor-id="a313x.7781069.0.i26" class="selected"
+									fill="#cdcdcd"></path>
+							</svg>秋装秒杀每满300减40</a>
+						<a class="flex align-items-center center" href=""><svg t="1666204967235" class="icon"
+								viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8605"
+								data-spm-anchor-id="a313x.7781069.0.i25" width="200" height="200">
+								<path
+									d="M192 438.4c12.8 0 24-11.2 24-24V256c0-22.4 17.6-40 40-40h158.4c12.8 0 24-11.2 24-24s-11.2-24-24-24H256c-48 0-88 40-88 88v158.4c0 12.8 11.2 24 24 24zM768 168h-158.4c-12.8 0-24 11.2-24 24s11.2 24 24 24H768c22.4 0 40 17.6 40 40v158.4c0 12.8 11.2 24 24 24s24-11.2 24-24V256c0-48-40-88-88-88zM832 585.6c-12.8 0-24 11.2-24 24V768c0 22.4-17.6 40-40 40h-158.4c-12.8 0-24 11.2-24 24s11.2 24 24 24H768c48 0 88-40 88-88v-158.4c0-12.8-11.2-24-24-24zM414.4 808H256c-22.4 0-40-17.6-40-40v-158.4c0-12.8-11.2-24-24-24s-24 11.2-24 24V768c0 48 40 88 88 88h158.4c12.8 0 24-11.2 24-24s-11.2-24-24-24zM832 488H192c-12.8 0-24 11.2-24 24s11.2 24 24 24h640c12.8 0 24-11.2 24-24s-11.2-24-24-24z"
+									p-id="8606" data-spm-anchor-id="a313x.7781069.0.i26" class="selected"
+									fill="#cdcdcd"></path>
+							</svg>京东9.9元超值爆品</a>
+						<a class="flex align-items-center center" href=""><svg t="1666204967235" class="icon"
+								viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8605"
+								data-spm-anchor-id="a313x.7781069.0.i25" width="200" height="200">
+								<path
+									d="M192 438.4c12.8 0 24-11.2 24-24V256c0-22.4 17.6-40 40-40h158.4c12.8 0 24-11.2 24-24s-11.2-24-24-24H256c-48 0-88 40-88 88v158.4c0 12.8 11.2 24 24 24zM768 168h-158.4c-12.8 0-24 11.2-24 24s11.2 24 24 24H768c22.4 0 40 17.6 40 40v158.4c0 12.8 11.2 24 24 24s24-11.2 24-24V256c0-48-40-88-88-88zM832 585.6c-12.8 0-24 11.2-24 24V768c0 22.4-17.6 40-40 40h-158.4c-12.8 0-24 11.2-24 24s11.2 24 24 24H768c48 0 88-40 88-88v-158.4c0-12.8-11.2-24-24-24zM414.4 808H256c-22.4 0-40-17.6-40-40v-158.4c0-12.8-11.2-24-24-24s-24 11.2-24 24V768c0 48 40 88 88 88h158.4c12.8 0 24-11.2 24-24s-11.2-24-24-24zM832 488H192c-12.8 0-24 11.2-24 24s11.2 24 24 24h640c12.8 0 24-11.2 24-24s-11.2-24-24-24z"
+									p-id="8606" data-spm-anchor-id="a313x.7781069.0.i26" class="selected"
+									fill="#cdcdcd"></path>
+							</svg>聚划算满300减50</a>
+					</div>
+					<div class="line"></div>
+				</div>
+				<div class="detailed">
+					<div class="main-left">
+						<div class="main-left-top">
+							<ul class="title-text-normal flex align-items-center space-between">
+								<li class="title-text border-bottom">娱乐</li>
+								<li>体育</li>
+								<li>科技</li>
+								<li>汽车</li>
+								<li>图文</li>
+							</ul>
+						</div>
+						<div class="main-left-main flex align-items-center">
+							<div class="main-left-left flex align-items-center column">
+								<a href="">
+									<img src="./img/img1.png" alt="">
+									<p>2022巴黎车展：玩的就是“前卫”</p>
+								</a>
+								<div class="main-left-left-bottom">
+									<a href="">
+										<img src="./img/img2.jpg" alt="">
+										<p>2022巴黎车展：玩的就是“前卫”</p>
+									</a>
+									<a href="">
+										<img src="./img/img2.jpg" alt="">
+										<p>2022巴黎车展：玩的就是“前卫”</p>
+									</a>
+									<a href="">
+										<img src="./img/img2.jpg" alt="">
+										<p>2022巴黎车展：玩的就是“前卫”</p>
+									</a>
+									<a href="">
+										<img src="./img/img2.jpg" alt="">
+										<p>2022巴黎车展：玩的就是“前卫”</p>
+									</a>
+								</div>
+							</div>
+							<div class="main-left-right flex column space-between">
+								<div class="main-left-right-">
+									<ul class="flex column space-evenly">
+										<li><a>中国天眼让我国射电天文领先世界20年</a></li>
+										<li><a>“退网创业”的罗永浩，要回来直播了？</a></li>
+										<li><a>网友称苹果未发货21款iPad Pro免费升级至最新22款</a></li>
+										<li><a>像素级模仿新东方，“老对手”好未来被动了吗?</a></li>
+										<li><a>第三季度全球手机份额公布：小米成国产第一</a></li>
+										<li><a>可感知手指的动作苹果VR手套专利获授权</a></li>
+										<li><a>Meta的“元宇宙”又翻车了，这次主角是扎克伯格的腿</a></li>
+										<li><a>马斯克称3万瓶“烧焦的头发”香水已售罄</a></li>
+									</ul>
+								</div>
+								<div class="main-left-right-">
+									<ul class="flex column space-evenly">
+										<li><a>中国天眼让我国射电天文领先世界20年</a></li>
+										<li><a>“退网创业”的罗永浩，要回来直播了？</a></li>
+										<li><a>网友称苹果未发货21款iPad Pro免费升级至最新22款</a></li>
+										<li><a>像素级模仿新东方，“老对手”好未来被动了吗?</a></li>
+										<li><a>第三季度全球手机份额公布：小米成国产第一</a></li>
+										<li><a>可感知手指的动作苹果VR手套专利获授权</a></li>
+										<li><a>Meta的“元宇宙”又翻车了，这次主角是扎克伯格的腿</a></li>
+										<li><a>马斯克称3万瓶“烧焦的头发”香水已售罄</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="advertisement">
+							<div class=" flex space-between column">
+								<a class="advertisement-head border-bottom title-text" href="">游戏</a>
+								<div class="advertisement-main flex space-between align-items-center">
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="advertisement">
+							<div class=" flex space-between column">
+								<a class="advertisement-head border-bottom title-text" href="">效率</a>
+								<div class="advertisement-main flex space-between align-items-center">
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="advertisement">
+							<div class=" flex space-between column">
+								<a class="advertisement-head border-bottom title-text" href="">猜你喜欢</a>
+								<div class="advertisement-main flex space-between align-items-center">
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="advertisement">
+							<div class=" flex space-between column">
+								<a class="advertisement-head border-bottom title-text" href="">广告</a>
+								<div class="advertisement-main flex space-between align-items-center">
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="advertisement">
+							<div class=" flex space-between column">
+								<a class="advertisement-head border-bottom title-text" href="">广告</a>
+								<div class="advertisement-main flex space-between align-items-center">
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="advertisement">
+							<div class=" flex space-between column">
+								<a class="advertisement-head border-bottom title-text" href="">广告</a>
+								<div class="advertisement-main flex space-between align-items-center">
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+									<a class="flex column center" href=""><img src="./img/img3.jpg" alt="">
+										<p>贪婪洞窟</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="main-right flex space-between column">
+						<div class="main-right-">
+							<div class=" flex space-between column">
+								<a class="main-right-head border-bottom title-text" href="">抖音热榜</a>
+								<div class="main-right-main flex space-between column">
+									<a href=""><span>1</span>看AI画出未来中国有多美</a>
+									<a href=""><span>2</span>中国天眼新发现</a>
+									<a href=""><span>3</span>请赐我一双这样的手</a>
+									<a href=""><span>4</span>看AI画出未来中国有多美</a>
+									<a href=""><span>5</span>看AI画出未来中国有多美</a>
+									<a href=""><span>6</span>看AI画出未来中国有多美</a>
+									<a href=""><span>7</span>看AI画出未来中国有多美</a>
+									<a href=""><span>8</span>看AI画出未来中国有多美</a>
+								</div>
+							</div>
+							<div class="flex space-between column">
+								<a class="main-right-head border-bottom title-text" href="">今日推荐</a>
+								<div class="main-right-main flex space-between column">
+									<a href=""><span>1</span>看AI画出未来中国有多美</a>
+									<a href=""><span>2</span>看AI画出未来中国有多美</a>
+									<a href=""><span>3</span>看AI画出未来中国有多美</a>
+									<a href=""><span>4</span>看AI画出未来中国有多美</a>
+									<a href=""><span>5</span>看AI画出未来中国有多美</a>
+									<a href=""><span>6</span>看AI画出未来中国有多美</a>
+									<a href=""><span>7</span>看AI画出未来中国有多美</a>
+									<a href=""><span>8</span>看AI画出未来中国有多美</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		setInterval(() => {
+			if (window.scrollY >= 80) {
+				// document.getElementsByClassName("top-1")[0].style.display = "none"
+				document.querySelector(".top-1").classList.add("display-none")
+				document.querySelector(".top-1").classList.remove("display-block")
+				document.getElementsByClassName("top")[0].style.height = "82px"
+			} else {
+				document.querySelector(".top-1").classList.remove("display-none")
+				document.querySelector(".top-1").classList.add("display-block")
+				// document.getElementsByClassName("top-1")[0].style.display = "block"
+				document.getElementsByClassName("top")[0].style.height = "150px"
+			}
+
+			if (window.scrollY >= 360) {
+				document.getElementsByClassName("main-right-")[0].style.position = "fixed"
+			} else {
+				document.getElementsByClassName("main-right-")[0].style.position = "inherit"
+			}
+		}, 100)
+		setInterval(() => {
+			if (document.getElementsByClassName("news")[0].innerHTML === "(1.09)") {
+				document.getElementsByClassName("news")[0].innerHTML = "武老师是最好的老师"
+			} else {
+				document.getElementsByClassName("news")[0].innerHTML = "(1.09)"
+			}
+		}, 3000)
+	</script>
+</html>

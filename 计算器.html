@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../vue-manage/js/jquery-3.6.0.js"></script>
+		<style type="text/css">
+			* {
+				margin: 0 auto;
+				padding: 0;
+			}
+
+			.app {
+				margin: 0 auto;
+				padding-top: 30px;
+				padding-left: 5px;
+				width: 220px;
+				height: 335px;
+				border: 2px solid black;
+				border-radius: 15px;
+			}
+
+			.text input {
+				width: 210px;
+				height: 40px;
+				margin-bottom: 10px;
+				text-align: right;
+			}
+
+			.main .button {
+				margin: 2px 0;
+				width: 50px;
+				height: 50px;
+			}
+
+			.main .span {
+				margin: 2px 0;
+				width: 50px;
+				height: 50px;
+			}
+			
+			.main .del {
+				margin: 2px 0;
+				width: 50px;
+				height: 50px;
+			}
+			
+			.main .delAll {
+				margin: 2px 0;
+				width: 50px;
+				height: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="app">
+			<div class="text">
+				<input type="text" name="" id="text" value="" />
+			</div>
+			<div class="main">
+				<button class="button" type="button">(</button>
+				<button class="button" type="button">)</button>
+				<button class="delAll" type="button">C</button>
+				<button class="del" type="button"><</button>
+			</div>
+			<div class="main">
+				<button class="button" type="button">7</button>
+				<button class="button" type="button">8</button>
+				<button class="button" type="button">9</button>
+				<button class="button" type="button">/</button>
+			</div>
+			<div class="main">
+				<button class="button" type="button">4</button>
+				<button class="button" type="button">5</button>
+				<button class="button" type="button">6</button>
+				<button class="button" type="button">*</button>
+			</div>
+			<div class="main">
+				<button class="button" type="button">1</button>
+				<button class="button" type="button">2</button>
+				<button class="button" type="button">3</button>
+				<button class="button" type="button">-</button>
+			</div>
+			<div class="main">
+				<button class="button" type="button">0</button>
+				<button class="button" type="button">.</button>
+				<button type="button" class="span">=</button>
+				<button class="button" type="button">+</button>
+			</div>
+		</div>
+	</body>
+	<script>
+		$(document).ready(function() {
+			$(".main .button").click(function() {
+				$("#text").val($("#text").val() + $(this).text());
+			})
+			$(".main .span").click(function() {
+				var text = $("#text").val()
+				text = text.replace("+","a")
+				console.log(text)
+				url = "http://127.0.0.1:8082/str?str=" + text;
+				$.getJSON(url, function(str) {
+					$("#text").val(str.str);
+				});
+				$.ajax({
+					type: "get",
+					url: url,
+					contentType: "application/x-www-form-urlencoded",
+					dataType: "json",
+					success: function (data) {
+						console.log(data.str)
+						$("#text").val(data.str);
+					},
+					error(data) {
+						console.log(data)
+						$("#text").val(data.statusText);
+					}
+				});
+			})
+			$(".main .delAll").click(function () {
+				$("#text").val("")
+			})
+			$(".main .del").click(function () {
+				var text = $("#text").val()
+				text = text.substring(0,text.length-1)
+				$("#text").val(text)
+			})
+		})
+	</script>
+</html>

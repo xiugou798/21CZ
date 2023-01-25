@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0 auto;
+				padding: 0;
+				border: 0;
+			}
+
+			body {
+				width: 100%;
+				height: 100%;
+			}
+
+			@keyframes refresh {
+				0% {
+					margin-top: -800px;
+				}
+
+				100% {
+					margin-top: 0px;
+				}
+			}
+
+			@keyframes handle_bg {
+				0% {
+					background-color: rgb(247, 0, 0);
+				}
+
+				33% {
+					background-color: rgb(0, 255, 0);
+				}
+
+				66% {
+					background-color: rgb(42, 0, 255);
+				}
+
+				100% {
+					background-color: rgb(255, 0, 0);
+				}
+			}
+
+			#app {
+				margin-top: 0px;
+				width: 100vw;
+				height: 100vh;
+				background-color: rgb(242, 247, 247);
+				animation: refresh 1.5s;
+				/* animation: handle_bg 100ms infinite; */
+			}
+
+			.top {
+				width: 75%;
+				height: 20%;
+				padding-top: 50px;
+			}
+
+			.top:hover {
+				animation: become_big 200ms;
+			}
+
+			.top-img {
+				flex: 1;
+				display: flex;
+				padding: 20px 50px 20px 20px;
+				justify-content: center;
+			}
+
+			.top-img img {
+				border-radius: 100%;
+				width: 100px;
+				height: 100px;
+			}
+
+			.top-img img:hover {
+				animation: become_big 200ms;
+			}
+
+			@keyframes become_big {
+				0% {
+					transform: scale(1, 1);
+				}
+
+				100% {
+					transform: scale(1.2, 1.2);
+				}
+			}
+			@keyframes become_max_big {
+				0% {
+					transform: scale(1, 1);
+				}
+
+				100% {
+					transform: scale(10, 10);
+				}
+			}
+
+			.top-bg {
+				background-color: white;
+				border-radius: 10px;
+				display: flex;
+			}
+
+			.top-main {
+				flex: 3;
+				display: flex;
+			}
+
+			.top-main-item {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.top-main-item h3 {
+				margin: 10px 0;
+			}
+
+			.top-main-item:hover {
+				transform: scale(1.1, 1.1);
+				cursor: pointer;
+			}
+
+			.main {
+				width: 75%;
+				height: 80%;
+				display: flex;
+				margin-top: 20px;
+			}
+
+			.main-left {
+				align-items: center;
+				margin: 0 10px;
+				height: 80%;
+				border-radius: 20px;
+				background-color: white;
+				flex: 2;
+				position: relative;
+				text-align: center;
+			}
+
+			.main-left:hover {
+				animation: become_big 200ms;
+			}
+
+			.main-right:hover {
+				animation: become_big 200ms;
+			}
+
+			.main-left h1 {
+				line-height: 75px;
+			}
+
+			.main-left iframe {
+				height: 710px;
+				width: 800px;
+				top: 0;
+				margin-top: 36px;
+				margin-left: -236px;
+				position: absolute;
+				transform: scale(.4, .4) translate(-50%, -50%);
+			}
+
+			.main-center {
+				align-items: center;
+				margin: 0 10px;
+				height: 80%;
+				border-radius: 20px;
+				background-color: white;
+				flex: 3;
+			}
+
+			.main-right {
+				align-items: center;
+				text-align: center;
+				margin: 0 10px;
+				height: 80%;
+				border-radius: 20px;
+				background-color: white;
+				flex: 2;
+			}
+
+			.main-right h1 {
+				line-height: 63px;
+			}
+
+			.main-right iframe {
+				margin-top: 16px;
+				height: 369px;
+				width: 312px;
+			}
+
+			.main-center ul {
+				list-style: none;
+			}
+
+
+			.main-center ul li>div {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 20px 5px;
+			}
+
+			.main-center ul li .list-title p {
+				font-size: 20px;
+				font-weight: 600;
+			}
+
+			.list-add {
+				width: 50%;
+				text-align: center;
+				font-size: 30px;
+				font-weight: 800;
+				margin: 0 auto;
+				border: 1px solid black;
+				border-radius: 5px;
+			}
+
+			.list-add:hover {
+				transform: scale(0.95, 0.95);
+				background-color: rgb(242, 247, 247);
+			}
+
+			#huohu {
+				width: 100vw;
+			}
+
+			.huohu {
+				width: 100px;
+				height: 100px;
+				position: fixed;
+				background: #c1c1c1;
+				right: 50px;
+				top: 80px;
+				border-radius: 100%;
+				text-align: center;
+				line-height: 100px;
+				font-size: 14px;
+				cursor: pointer;
+			}
+
+			.huohu:hover {
+				animation: huohu_hover 0.5s infinite;
+			}
+
+			#kuaile {
+				width: 100px;
+				height: 100px;
+				position: fixed;
+				background: #c1c1c1;
+				right: 50px;
+				top: 320px;
+				border-radius: 100%;
+				text-align: center;
+				line-height: 100px;
+				font-size: 14px;
+				cursor: pointer;
+			}
+
+			#kuaile:hover {
+				animation: huohu_hover 0.5s infinite;
+			}
+
+			.flex_xitong:hover {
+				animation: huohu_hover 0.5s infinite;
+			}
+
+
+
+			.flex_xitong {
+				width: 100px;
+				height: 100px;
+				position: fixed;
+				background: #c1c1c1;
+				right: 50px;
+				top: 200px;
+				border-radius: 100%;
+				text-align: center;
+				line-height: 100px;
+				font-size: 14px;
+				cursor: pointer;
+			}
+
+			@keyframes huohu_hover {
+				0% {
+					transform: rotate(0deg) scale(1.2, 1.2);
+					color: black;
+				}
+
+				25% {
+					transform: rotate(-30deg) scale(1.2, 1.2);
+					color: aliceblue;
+				}
+
+				50% {
+					transform: rotate(0deg) scale(1.2, 1.2);
+					color: black;
+				}
+
+				75% {
+					transform: rotate(30deg) scale(1.2, 1.2);
+					color: aliceblue;
+				}
+
+				100% {
+					transform: rotate(0deg);
+					color: black;
+				}
+			}
+
+			@keyframes top_img_big {
+				0% {
+					transform: rotate(0deg) scale(1, 1);
+				}
+
+				25% {
+					transform: rotate(-60deg) scale(3, 3);
+				}
+
+				50% {
+					transform: rotate(0deg) scale(1, 1);
+				}
+
+				75% {
+					transform: rotate(60deg) scale(3, 3);
+				}
+
+				100% {
+					transform: rotate(0deg) scale(1, 1);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<div class="huohu" onclick="window.open('./火狐首页.html')">
+				去看看火狐首页
+			</div>
+			<div class="flex_xitong" onclick="window.open('./flex网页.html')">
+				去看看flex系统
+			</div>
+			<div id="kuaile" onclick="kuaile()">
+				开启快乐模式
+			</div>
+			<div class="top">
+				<div class="top-bg">
+					<div class="top-img"><img id="top_img" src="./img/1.png" alt=""></div>
+					<div class="top-main">
+						<div class="top-main-item">
+							<p>姓名</p>
+							<h3 id="myname">王钞</h3>
+						</div>
+						<div class="top-main-item">
+							<p>QQ</p>
+							<h3>1876146951</h3>
+						</div>
+						<div class="top-main-item">
+							<p>身高</p>
+							<h3>190</h3>
+						</div>
+						<div class="top-main-item">
+							<p>爱好</p>
+							<h3>“学习”</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main">
+				<div class="main-left">
+					<h1>小黄人</h1>
+					<iframe src="./小黄人.html" frameborder="0" scrolling="no"></iframe>
+				</div>
+				<div class="main-center">
+					<ul id="list">
+						<li>
+							<div class="list-title">
+								<p>困难等级</p>
+								<p>题目平台</p>
+								<p>题号</p>
+								<p>题目描述</p>
+							</div>
+						</li>
+					</ul>
+					<div class="list-add" id="add" onclick="add()">+</div>
+				</div>
+				<div class="main-right">
+					<h1>计算器</h1>
+					<iframe src="./计算器.html" frameborder="0" scrolling="no"></iframe>
+				</div>
+			</div>
+			<audio src="./花手.mp3" id="bgaudio"></audio>
+		</div>
+	</body>
+	<script>
+		// 从缓存读取
+		var data = JSON.parse(window.localStorage.getItem("data")) || []
+
+		// 刷新页面
+		function refresh() {
+			var list = document.getElementById('list')
+			data = JSON.parse(window.localStorage.getItem("data")) || []
+			list.innerHTML = `<li>
+							<div class="list-title" draggable="true">
+								<p>困难等级</p>
+								<p>题目平台</p>
+								<p>题号</p>
+								<p>题目描述</p>
+							</div>
+						</li>`
+			for (var i = 0; i < data.length; i++) {
+				list.innerHTML += `<li><div class="list-item" id="list_item_${data[i].id}"  draggable="true">
+									<p contenteditable="true" onclick="select_all(this)">${data[i].level}</p>
+									<p contenteditable="true" onclick="select_all(this)">${data[i].platform}</p>
+									<p contenteditable="true" onclick="select_all(this)">${data[i].num}</p>
+									<p contenteditable="true" onclick="select_all(this)">${data[i].describe}</p>
+								</div></li>`
+			}
+		}
+		refresh()
+
+
+		// 添加元素
+		function add() {
+			var list_add = document.getElementById('add')
+			data.length === 0 ? data.push({
+				id: 1,
+				level: "困难等级",
+				platform: "题目平台",
+				num: "题号",
+				describe: "题目描述",
+			}) : data.push({
+				id: data[data.length - 1].id + 1,
+				level: "困难等级",
+				platform: "题目平台",
+				num: "题号",
+				describe: "题目描述",
+			})
+			// 存缓存
+			window.localStorage.setItem("data", JSON.stringify(data))
+			refresh()
+		}
+
+		// 单击全选
+		function select_all(t) {
+			var selection = window.getSelection();
+			var range = document.createRange();
+			range.selectNodeContents(t);
+			selection.removeAllRanges();
+			selection.addRange(range);
+		}
+
+		// 每隔100ms更新数据
+		function updata() {
+			for (var i = 0; i < data.length; i++) {
+				var item_id = "list_item_" + data[i].id
+				var list_item = document.getElementById(item_id)
+				var list_item_text = list_item.innerText.split("\n\n")
+				data[i].level = list_item_text[0]
+				data[i].platform = list_item_text[1]
+				data[i].num = list_item_text[2]
+				data[i].describe = list_item_text[3]
+			}
+			window.localStorage.setItem("data", JSON.stringify(data))
+		}
+		setInterval(function() {
+			updata()
+		}, 100)
+
+
+		var bgaudiocount = 0;
+
+		function kuaile() {
+			++bgaudiocount;
+			if (bgaudiocount % 2 == 1) {
+				document.getElementById("bgaudio").play();
+				document.getElementById('app').style.animation = 'handle_bg 200ms infinite';
+				document.getElementById('top_img').style.animation = 'top_img_big 1s infinite';
+				document.getElementsByClassName('main-left')[0].style.animation = 'become_big 0.5s infinite';
+				document.getElementsByClassName('main-right')[0].style.animation = 'become_big 0.5s infinite';
+				document.getElementById('myname').style.animation = 'become_max_big 0.5s infinite';
+			} else {
+				document.getElementById("bgaudio").pause();
+				document.getElementById('app').style.animation = '';
+				document.getElementById('top_img').style.animation = '';
+				document.getElementById('myname').style.animation = '';
+				document.getElementsByClassName('main-left')[0].style.animation = '';
+				document.getElementsByClassName('main-right')[0].style.animation = '';
+			}
+
+		}
+	</script>
+</html>
